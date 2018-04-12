@@ -9,7 +9,7 @@ void    displaysedan(float ,char[],char[]);
 void    displaySUV(float,char[],char[]);
 void    displayLIMO(float,char[],char[]);
 void    displayLUXURY(float,char[],char[]);
-int     boss(int);
+int     boss(int,int);
 void    client();
 
 void main()
@@ -21,8 +21,9 @@ void main()
     char start[10],destination[10];
     printf("\n\t\t\t  ********  WELCOME TO TRAVEL  *********** \n ");
     printf("\n\t\t\t   *******   CAB - AGENCIES    ********* \n");
-    printf("\n\n Enter the type of car you need  : \n1.SEDAN \n2.SUV \n3.LIMO \n4.LUXURY \n Your need :- ");
+    printf("\n\n Enter the type of car you need  \n1.SEDAN \n2.SUV \n3.LIMO \n4.LUXURY \n Your need :- ");
     scanf("%d",&car);
+    //1.pethuwala 2.graphic era gate 2 3.grahic era gate 1 4.grahic era hill university 5.clement town 6.doiwala
     printf("\n Enter the Pickup point : ");
     scanf("%s",&start);
     printf("\n Enter the destination point : ");
@@ -53,11 +54,7 @@ void main()
     {
         l=6;
     }
-    n=boss(l);
-    if(n==1)
-    {
-      
-         if(p==9)
+    if(p==9)
         {
             m=1;
         }
@@ -81,6 +78,11 @@ void main()
         {
             m=6;
         }
+    n=boss(l,m);
+    if(n==1)
+    {
+      
+         
         dis=caldistance(k,p);
         printf("\nThe distance is :- %f",dis);
         switch(car)
@@ -113,12 +115,13 @@ void main()
     }
 }
 
-int boss(int location)
+int boss(int location1,int location2)
 {
     int check;
     printf("\nChecking the car !!! please wait .... \n");
-    if(location == 1 || location == 2|| location ==3 || location ==4 || location ==5 ||location ==6)
+    if(location1 == 1 || location1 == 2|| location1 ==3 || location1 ==4 || location1 ==5 ||location1 ==6)
     {
+        if(location2 == 1 || location2 == 2|| location2 ==3 || location2 ==4 || location2 ==5 ||location2 ==6)
         return (1);
     }
     else
@@ -173,7 +176,7 @@ float caldistance(int k,int p)
             o++;
        }
     dist=a[k][p];
-    printf("The distance :- %f",dist);
+
     return(dist);
 }
 float chargesedan(float dist)
