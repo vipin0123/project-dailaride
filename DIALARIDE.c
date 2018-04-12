@@ -23,7 +23,6 @@ void main()
     printf("\n\t\t\t   *******   CAB - AGENCIES    ********* \n");
     printf("\n\n Enter the type of car you need  : \n1.SEDAN \n2.SUV \n3.LIMO \n4.LUXURY \n Your need :- ");
     scanf("%d",&car);
-    printf("\n The cars are present at the location : \n1.pethuwala\n2.graphic era gate 2\n3.grahic era gate 1 \n4.grahic era hill university \n5.clement town \n6.doiwala");
     printf("\n Enter the Pickup point : ");
     scanf("%s",&start);
     printf("\n Enter the destination point : ");
