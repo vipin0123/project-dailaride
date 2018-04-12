@@ -25,7 +25,8 @@ void main()
     scanf("%d",&car);
     printf("\n Enter the Pickup point : ");
     scanf("%s",&start);
-    
+    printf("\n Enter the destination point : ");
+    scanf("%s",&destination);
     k=strlen(start);
     p=strlen(destination);
     if(k==9)
@@ -55,8 +56,7 @@ void main()
     n=boss(l);
     if(n==1)
     {
-        printf("\n Enter the destination point : ");
-        scanf("%s",&destination);
+      
          if(p==9)
         {
             m=1;
