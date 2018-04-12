@@ -25,8 +25,7 @@ void main()
     scanf("%d",&car);
     printf("\n Enter the Pickup point : ");
     scanf("%s",&start);
-    printf("\n Enter the destination point : ");
-    scanf("%s",&destination);
+    
     k=strlen(start);
     p=strlen(destination);
     if(k==9)
@@ -56,6 +55,8 @@ void main()
     n=boss(l);
     if(n==1)
     {
+        printf("\n Enter the destination point : ");
+        scanf("%s",&destination);
          if(p==9)
         {
             m=1;
@@ -131,7 +132,8 @@ float caldistance(int k,int p)
     int dis[6][6];
     float dist;
     static int a[6][6]={{2,4,3,5,6,9},{1,4,3,2,6,8},{7,1,34,8,6,12},{34,65,89,65,34,23},{12,11,13,19,8,20},{32,45,67,87,90,78}};
-    for(i=0;i<6;i++)                   //algo for find shortest path
+    printf("\nThe distance between the areas :- ");
+    for(i=0;i<6;i++)                   
     {
         printf("\n");
         for(j=0;j<6;j++)
@@ -139,6 +141,7 @@ float caldistance(int k,int p)
             printf("%f",a[i][j]);
         }
     }
+    
     printf("\n");
     for(i=0;i<6;i++)                   //algo for find shortest path
     {
@@ -147,6 +150,7 @@ float caldistance(int k,int p)
             dis[i][j]=a[i][j];
         }
     }
+   
     printf("\n");
        for(i=0;i<6;i++)
         {
@@ -167,8 +171,8 @@ float caldistance(int k,int p)
                 }
             }
             o++;
-        }
-    dist=dis[k][p];
+       }
+    dist=a[k][p];
     printf("The distance :- %f",dist);
     return(dist);
 }
