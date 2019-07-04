@@ -175,7 +175,7 @@ float caldistance(int k,int p)
             }
             o++;
        }
-    dist=a[k][p];
+    dist=dis[k][p];
 
     return(dist);
 }
